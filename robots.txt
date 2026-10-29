@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apartamenty-wroclaw-centrum.pl/sitemap.xml
