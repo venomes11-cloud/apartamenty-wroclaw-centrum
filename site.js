@@ -120,6 +120,8 @@
   if(home){var want=null;try{want=sessionStorage.getItem('sc-to');sessionStorage.removeItem('sc-to');}catch(x){}
     if(location.hash){want=location.hash.slice(1);history.replaceState(null,'',location.pathname+location.search);}
     if(want)setTimeout(function(){go(want);},150);}
+  if('IntersectionObserver' in window&&!still){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.atut,.ap,.g-item,.plan,.faq-t .row,.seo-txt h3').forEach(function(el){if(el.getBoundingClientRect().top>innerHeight){el.classList.add('rv');io.observe(el);}});}
   var lb=document.getElementById('lb');
   if(lb){var li=lb.querySelector('img'),items=[].slice.call(document.querySelectorAll('.g-item')),cur=0;
     function op(k){cur=(k+items.length)%items.length;li.src=items[cur].getAttribute('href');li.alt=items[cur].dataset.alt;lb.querySelector('.lb-cap').textContent=items[cur].dataset.alt;if(!lb.open)lb.showModal();}

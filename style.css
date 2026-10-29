@@ -726,6 +726,9 @@ h1{font-size:calc(clamp(2.1rem,5.4vw,4.2rem) * 0.92)}
 .tower .stick::after{background:radial-gradient(ellipse 60% 55% at 50% 50%,rgba(var(--navy-rgb),.78),rgba(var(--navy-rgb),.35) 70%),linear-gradient(180deg,rgba(var(--navy-rgb),.35),rgba(var(--navy-rgb),.85))}
 #tower .stick{align-items:center}#tower .panel{margin-inline:auto;padding:32px 22px;text-align:center}#tower h2{max-width:30ch;margin-inline:auto}
 .trustbar span b{color:var(--gold-pale)}
+.hero .slides img{object-fit:cover;object-position:center}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 .ap .pr{display:none}.ap-body p{font-size:.88rem;color:var(--ink-soft);margin:6px 0 12px;line-height:1.5}
 .legal .firma{display:block;max-width:76ch;opacity:.75;font-size:.72rem;line-height:1.6;margin-top:6px}
 #pakiety .plans{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:640px){#pakiety .plans{grid-template-columns:1fr}}
